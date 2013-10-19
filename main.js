@@ -1,6 +1,9 @@
 var gameModule = (
   function() {
-    
+
+    var timeoutVar,
+        counter = 0;
+
     function start() {
       var canvas = document.getElementById('game'),
           ctx = canvas.getContext('2d'),
@@ -26,6 +29,18 @@ var gameModule = (
       //draw the circle line
       ctx.stroke();
 
+      if (counter >= 10) {
+
+      }
+      else {
+        timeoutVar = setTimeOut(start, 1000); //每1000毫秒呼叫自己(start)
+        counter += 1;
+      }
+    
+    }
+
+    function gameOver() {
+      console.log(Conter: " + counter");
     }
 
     return {
