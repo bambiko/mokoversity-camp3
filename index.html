@@ -87,6 +87,8 @@ End of Bootstrap CSS Grid System
 </div>
 
 <script type="text/javascript">
+( //Close this function
+function() { //Anonymous function
   var canvas = document.getElementById('game');
   var ctx = canvas.getContext('2d');
   canvas.width = 480;
@@ -95,7 +97,11 @@ End of Bootstrap CSS Grid System
   ctx.beginPath();
   ctx.arc(100, 150, 50, 0, Math.PI, true);
   ctx.fill();
+}
+) //End of the anonymous function
+(); //Call the anonymous function immediately
 </script>
+
 
 </body>
 </html>
