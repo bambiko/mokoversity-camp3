@@ -5,10 +5,10 @@
   var circleY = Math.floor(Math.random()*300);
   var circleR = Math.floor(Math.random()*100);
   //canvas size
-  canvas.width = 480;
-  canvas.height = 320;
+  canvas.width = 500;
+  canvas.height = 500;
   //Gradient costent
-  var grd=ctx.createRadialGradient(63,65,0,85,85,100);
+  var grd=ctx.createRadialGradient(75,50,5,90,60,100);
   grd.addColorStop(0,"white");
   grd.addColorStop(1,"purple");
   //fill the gradient in the circle
