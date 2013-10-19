@@ -17,9 +17,9 @@ var gameModule = (
       canvas.height = 500;
       
       //Gradient costent
-      var grd=ctx.createRadialGradient(75,50,5,90,60,100);
+      var grd=ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
       grd.addColorStop(0,"white");
-      grd.addColorStop(1,"purple");
+      grd.addColorStop(1,"DarkOrchid");
       //fill the gradient in the circle
       ctx.fillStyle = grd;
       //draw the purple circle
@@ -30,11 +30,11 @@ var gameModule = (
       //draw the circle line
       ctx.stroke();
 
-      if (counter >= 10) {
-
+      if (counter >= 100) {
+        //for code quality?! - sometimes benifit
       }
       else {
-        timeoutVar = setTimeout(start, 1000); //每1000毫秒呼叫自己(start)
+        timeoutVar = setTimeout(start, 250); //每1000毫秒呼叫自己(start)
         counter += 1;
       }
     
