@@ -1,6 +1,9 @@
 ( function() {
   var canvas = document.getElementById('game');
   var ctx = canvas.getContext('2d');
+  var circleX = Math.floor(Math.random()*300);
+  var circleY = Math.floor(Math.random()*300);
+  var circleR = Math.floor(Math.random()*100);
   //canvas size
   canvas.width = 480;
   canvas.height = 320;
@@ -12,7 +15,7 @@
   ctx.fillStyle = grd;
   //draw the purple circle
   ctx.beginPath();
-  ctx.arc(100, 100, 80, 0, Math.PI*2, true);
+  ctx.arc(circleX, circleY, circleR, 0, Math.PI*2, true);
   //fill the circle with color(fillStyle)
   ctx.fill();
   //draw the circle line
