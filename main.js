@@ -33,14 +33,14 @@ var gameModule = (
 
       }
       else {
-        timeoutVar = setTimeOut(start, 1000); //每1000毫秒呼叫自己(start)
+        timeoutVar = setTimeout(start, 1000); //每1000毫秒呼叫自己(start)
         counter += 1;
       }
     
     }
 
     function gameOver() {
-      console.log(Conter: " + counter");
+      console.log("Conter: " + counter);
     }
 
     return {
