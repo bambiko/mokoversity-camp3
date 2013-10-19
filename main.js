@@ -12,6 +12,7 @@ var gameModule = (
           circleR = Math.floor(Math.random()*100);
       
       //canvas size
+      //放在function中才會每次都清空畫布=每次都重畫一次畫布
       canvas.width = 500;
       canvas.height = 500;
       
