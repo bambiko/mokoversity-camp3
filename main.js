@@ -1,9 +1,9 @@
 ( function() {
-  var canvas = document.getElementById('game');
-  var ctx = canvas.getContext('2d');
-  var circleX = Math.floor(Math.random()*300);
-  var circleY = Math.floor(Math.random()*300);
-  var circleR = Math.floor(Math.random()*100);
+  var canvas = document.getElementById('game'),
+      ctx = canvas.getContext('2d'),
+      circleX = Math.floor(Math.random()*300),
+      circleY = Math.floor(Math.random()*300),
+      circleR = Math.floor(Math.random()*100);
   //canvas size
   canvas.width = 500;
   canvas.height = 500;
