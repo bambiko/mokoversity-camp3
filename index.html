@@ -82,24 +82,27 @@ End of Bootstrap CSS Grid System
 
 <div class="row">
   <div class="col-md-12">
-    <div id="game"><canvas class="game"></canvas></div>
+    <div id="main"><canvas id="game"></canvas></div>
   </div>
 </div>
 
 <script type="text/javascript">
-( //Close this function
-function() { //Anonymous function
+( function() {
   var canvas = document.getElementById('game');
   var ctx = canvas.getContext('2d');
+  
   canvas.width = 480;
   canvas.height = 320;
-  ctx.fillStyle = 'blue';
+  
+  var grd=ctx.createRadialGradient(63,65,0,85,85,100);
+  grd.addColorStop(0,"white");
+  grd.addColorStop(1,"purple");
+  
+  ctx.fillStyle = grd;
   ctx.beginPath();
-  ctx.arc(100, 150, 50, 0, Math.PI, true);
+  ctx.arc(100, 100, 80, 0, Math.PI*2, true);
   ctx.fill();
-}
-) //End of the anonymous function
-(); //Call the anonymous function immediately
+} ) ();
 </script>
 
 
