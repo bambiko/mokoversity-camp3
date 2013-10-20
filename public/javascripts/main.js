@@ -14,6 +14,10 @@ var gameModule = (function (document) {
 
     function gameOver() {
         console.log("Final Scores: " + scores);
+
+        var api = "http://127.0.0.1:3000/scores?scores=" + scores;
+
+        $.ajax({ url: api });
     }
 
     function startGame() {

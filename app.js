@@ -9,6 +9,10 @@ var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 
+// p.53 3-6 Query String
+var querystring = require('querystring');
+var parsedstring = querystring.parse('scores');
+
 var app = express();
 
 // all environments
