@@ -4,7 +4,21 @@ var gameModule = (
     var timeoutVar,
         counter = 0;
 
+    var color = ['#ff0000', '#00ff00', '#0000ff'];
+    var length = color.length;
+
+    function touchEvent(evt) {
+      var x = evt.clientX,
+          y = evt.clientY;
+      cosole.log("Click!");
+    }
+
     function start() {
+      document.getElementById("main").addEventListener("click", touchEvent, false);
+      startGame();
+    }
+
+    function startGame() {
       var canvas = document.getElementById('game'),
           ctx = canvas.getContext('2d'),
           circleX = Math.floor(Math.random()*300),
@@ -21,7 +35,7 @@ var gameModule = (
       grd.addColorStop(0,"white");
       grd.addColorStop(1,"DarkOrchid");
       //fill the gradient in the circle
-      ctx.fillStyle = grd;
+      ctx.fillStyle = color[counter % length];
       //draw the purple circle
       ctx.beginPath();
       ctx.arc(circleX, circleY, circleR, 0, Math.PI*2, true);
@@ -30,7 +44,8 @@ var gameModule = (
       //draw the circle line
       ctx.stroke();
 
-      if (counter >= 100) {
+      if (counter >= 10) {
+        gameOver();
         //for code quality?! - sometimes benifit
       }
       else {
@@ -41,7 +56,7 @@ var gameModule = (
     }
 
     function gameOver() {
-      console.log("Conter: " + counter);
+      console.log("Counter: " + counter);
     }
 
     return {
